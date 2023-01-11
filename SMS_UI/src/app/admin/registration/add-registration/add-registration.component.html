@@ -1,0 +1,88 @@
+    <form [formGroup]="form" (ngSubmit)="saveRegistrationDetails(form)">
+
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>
+                   {{registrationTitle}}
+                </mat-card-title>
+
+            </mat-card-header>
+
+            <mat-card-component>
+                <div class="row">
+                    <div class="col">
+                        <mat-form-field>
+                            <input type="text" matInput placeholder="First Name" formControlName="firstName">
+                        </mat-form-field>
+                    </div>
+
+                    <div class="col">
+                        <mat-form-field>
+                            <input type="text" matInput placeholder="Last Name" formControlName="lastName">
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="row">
+                   
+                    <mat-radio-group formControlName="gender">
+                        <mat-lable class="leble-margin">Select Gender</mat-lable>
+                        <mat-radio-button value="male">Male</mat-radio-button>
+                        <mat-radio-button value="female">Female</mat-radio-button>
+                        <mat-radio-button value="other">Other</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+
+                    <div class="row">
+                        <mat-form-field>
+                            <input type="text" matInput maxlength="13" placeholder="Mobile Number" formControlName="mobileNumber">
+                        </mat-form-field>
+                    </div>
+    
+                    <div class="row">
+                        <mat-form-field>
+                            <input type="text" matInput placeholder="Email ID" formControlName="email">
+                        </mat-form-field>
+                    </div>
+                    
+                <div class="row">
+                    <mat-form-field>
+                        <textarea rows="3" type="text" matInput  placeholder="Address" formControlName="address"> </textarea>
+                    </mat-form-field>
+                </div>
+
+                <div class="row">
+                    <mat-form-field>
+                        <input type="text" matInput  placeholder="User Id" formControlName="userId">
+                    </mat-form-field>
+                </div>
+
+                <div class="row">
+                    <mat-form-field>
+                        <input type="password" matInput  placeholder="Password" formControlName="password">
+                    </mat-form-field>
+                </div>
+
+                <div class="row">
+                    <mat-form-field>
+                        <input type="password" matInput placeholder="Confirm Password" formControlName="confirmPassword">
+                    </mat-form-field>
+                </div>
+
+            </mat-card-component>
+            
+            <mat-card-action >
+
+                <div class="align-center">
+                    <button mat-raised-button (click)="cancleRegistrationDetails()">Cancel</button>
+                    <button mat-raised-button color="primary" class="left-margin">Submit</button>
+                </div>
+                
+            </mat-card-action>
+
+        </mat-card>
+
+        
+
+    </form>

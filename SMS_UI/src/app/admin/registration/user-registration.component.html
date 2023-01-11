@@ -1,0 +1,25 @@
+<div>
+    <!--Panel Header-->
+    <div class="row title-bar">
+        <h2>{{title}}
+            <span class="add-button" (click)="displayRegistrationForm()">
+                <i class="fa fa-regular fa-user-plus"></i>
+            </span>
+        </h2>
+    </div>
+
+    <!--Pannel Body-->
+    <div class="row">
+        <!--Table Component-->
+        <div class="col">
+            <app-view-registration-data [userData]="newUserInfo"
+                (editFormDetails)="editRegistrationForm($event)"></app-view-registration-data>
+        </div>
+        
+        <!-- Form Panel-->
+        <div *ngIf="showRegistrationForm" class="formPanel">
+            <app-add-registration (formStatus)=formOpenStatusHandler($event)
+                [editUserData]="editUserInfoData"></app-add-registration>
+        </div>
+    </div>
+</div>

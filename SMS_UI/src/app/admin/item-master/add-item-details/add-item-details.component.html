@@ -1,0 +1,56 @@
+
+<form [formGroup]="form" (ngSubmit)="saveItemDetails(form)">
+
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+               {{itemTitle}}
+            </mat-card-title>
+
+        </mat-card-header>
+
+        <mat-card-component>
+              
+            
+            <div class="row">
+                <mat-form-field appearance="fill">
+                    <mat-label>Select Category</mat-label>
+                    <mat-select [(value)]="categoryId">
+                        <!-- <mat-option value="">Select Category</mat-option>   -->
+                      <mat-option value="category1">Category 1</mat-option>
+                      <mat-option value="category2">Category 2</mat-option>
+                      <mat-option value="category3">Category 3</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+
+            </div>
+
+            <div class="row">
+                <mat-form-field>
+                    <input type="text" matInput placeholder="Item Name" formControlName="itemName">
+                </mat-form-field>
+
+            </div>
+
+            <div class="row">
+                <mat-form-field>
+                    <textarea rows="3" type="text" matInput  placeholder="Discrption" formControlName="description"> </textarea>
+                </mat-form-field>
+            </div>
+
+        </mat-card-component>
+        
+        <mat-card-action >
+
+            <div class="align-center">
+                <button mat-raised-button (click)="cancleItemDetails()">Cancel</button>
+                <button mat-raised-button color="primary" class="left-margin">Submit</button>
+            </div>
+            
+        </mat-card-action>
+
+    </mat-card>
+
+    
+
+</form>

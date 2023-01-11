@@ -1,0 +1,40 @@
+<form [formGroup]="form" (ngSubmit)="saveCategoryDetails(form)">
+
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+               {{categoryTitle}}
+            </mat-card-title>
+
+        </mat-card-header>
+
+        <mat-card-component>
+            <div class="row">
+                <mat-form-field>
+                    <input type="text" matInput placeholder="Category Name" formControlName="categoryName">
+                </mat-form-field>
+
+            </div>
+
+            <div class="row">
+                <mat-form-field>
+                    <textarea rows="3" type="text" matInput  placeholder="Discrption" formControlName="description"> </textarea>
+                </mat-form-field>
+            </div>
+
+        </mat-card-component>
+        
+        <mat-card-action >
+
+            <div class="align-center">
+                <button mat-raised-button (click)="cancleCategoryDetails()">Cancel</button>
+                <button mat-raised-button color="primary" class="left-margin">Submit</button>
+            </div>
+            
+        </mat-card-action>
+
+    </mat-card>
+
+    
+
+</form>

@@ -1,0 +1,72 @@
+.loginPage {
+    height: 95vh;
+    margin:1rem;
+    opacity: 1;
+    z-index: 1;
+}
+
+.imageScrollingArea{
+    height: 95vh;
+
+}
+.imageSize img {
+    height: 95vh;
+     width: 99%;
+}
+
+
+
+.loginPagePanel{
+    height: 95vh;
+}
+
+.loginForm {
+    padding: 10px;
+    height: 55vh;
+    color: white;
+    border: 0 solid gray;
+    background-color:black;
+}
+
+.headerLogo img{
+    height: 30vh;
+    width: 100%;
+    margin-bottom: 10vh;
+}
+
+.loginButton {
+    text-align: center;
+}
+
+.btn-block {
+    padding: 5px 20px 5px 20px;
+}
+.loginHeader {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    color: red;
+    margin-bottom: 2rem;
+}
+
+.authError {
+    font-size: 18px;
+    color: red;
+    font-weight: 400;
+    text-align: center;
+}
+
+.loginForm img{
+    height: 80px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.error {
+    color: red;
+    font-size: 0.8rem;
+}
+
+
+
+

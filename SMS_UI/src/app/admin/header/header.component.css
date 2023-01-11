@@ -1,0 +1,40 @@
+.headerPanel {
+    height: 80px;
+    border-bottom: 1px solid lightgrey;
+}
+
+.headerLogo img{
+    height: 80px;
+    width: 100%;
+}
+
+.titleText{
+    text-align: center;
+    color:#FFD700;
+    font-size: 1.8em;
+    line-height: 1em;
+    font-weight: 600;
+    margin-top: 0.7rem;
+}
+
+@media screen and (min-width: 600px)  {
+    .titleText{
+        margin-top: 1.8rem;
+    }
+    
+}
+
+.logout-btn{
+    position: absolute;
+    top: 25px;
+    right: 0;
+    margin-right: 20px;
+    font-size: 20px;
+    color: aliceblue;
+    cursor: pointer;
+    text-align: end;
+}
+
+.logout-btn :hover{
+    color: red;
+}

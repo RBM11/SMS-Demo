@@ -1,0 +1,25 @@
+<div>
+    <!--Panel Header-->
+    <div class="row title-bar">
+        <h2>{{title}}
+            <span class="add-button" (click)="displayCategoryForm()">
+                <i class="fa fa-regular fa-plus-square"></i>
+            </span>
+        </h2>
+    </div>
+
+    <!--Pannel Body-->
+    <div class="row">
+        <!--Table Component-->
+        <div class="col tableHeader">
+            <app-view-catetory-details [categoryData]="newCategoryInfo"
+                (editCategoryDetails)="editCategoryDetails($event)"></app-view-catetory-details>
+        </div>
+        
+        <!-- Form Panel-->
+        <div *ngIf="showCategoryForm" class="formPanel">
+            <app-add-catetory-details (formStatus)=formOpenStatusHandler($event)
+                [editCategoryData]="editCategoryData"></app-add-catetory-details>
+        </div>
+    </div>
+</div>

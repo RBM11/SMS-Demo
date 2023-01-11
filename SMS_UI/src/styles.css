@@ -1,0 +1,84 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.min.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  background-color: black;
+  opacity: 0.75;
+  color: white;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+table {
+  width: 100%;
+}
+
+.table-container {
+  max-height: 700px;
+  overflow: auto;
+}
+
+th.mat-header-cell{
+  color: black;
+  font-size: 14px;
+  text-align: left;
+}
+
+
+.action-cell {
+  width: 120px;
+  text-align: center;
+}
+
+.edit-button {
+  font-size: 25px;
+  cursor: pointer;
+  text-align: center;
+
+}
+
+.edit-button:hover {
+  color: black;
+}
+
+
+.formPanel {
+  max-width: 600px;
+  min-width: 250px;
+  margin-left: auto;
+  display: block !important;
+}
+
+.title-bar {
+  background-color: black;
+  padding-top: 5px;
+
+}
+
+.add-button {
+  font-size: 22px;
+  float: right;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+
+.left-margin {
+  margin-left: 1rem;
+
+}
+
+.align-center {
+  text-align: center;
+}

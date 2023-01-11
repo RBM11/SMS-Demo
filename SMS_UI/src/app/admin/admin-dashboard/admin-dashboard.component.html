@@ -1,0 +1,54 @@
+
+<div  class="adminPanel">
+
+
+<app-header></app-header>
+    <div class="row">
+
+
+    <div class="col-md-2 col-sm-4 left-menu">
+        <div class="menu-box" routerLink="./home">
+            <i class="fa fa-home"></i> Home
+        </div>
+
+        <div class="menu-box" routerLink="./shopping">
+            <i class="fa fa-shopping-basket"></i> Stock Master
+        </div>
+
+        <div class="menu-box" routerLink="./shopping">
+            <i class="fa fa-shopping-cart"></i> Sells
+        </div>
+
+        <div class="menu-box"routerLink="./registration">
+            <i class="fa fa-user"></i> User Registration
+        </div>
+
+        <div class="menu-box" routerLink="./category">
+            <i class="fa fa-cog"></i> Category Master
+        </div>
+
+        <div class="menu-box" routerLink="./items">
+            <i class="fa fa-cogs"></i> Items Master
+        </div>
+        
+        <div class="menu-box" routerLink="./shopping">
+            <i class="fa fa-shopping-cart"></i> Unit Master
+        </div>
+
+        <div class="menu-box" routerLink="./reports">
+            <i class="fa fa-pie-chart"></i> Reports
+        </div>
+    </div>
+
+    <div class="col-md-10 col-sm-8">
+         <router-outlet></router-outlet>
+    </div>
+    
+
+    
+    
+</div>
+
+<!-- <app-footer></app-footer> -->
+
+</div>

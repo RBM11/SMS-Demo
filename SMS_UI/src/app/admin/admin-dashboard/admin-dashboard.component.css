@@ -1,0 +1,26 @@
+.left-menu {
+    background-color:gray;
+    position: relative;
+    height: 89vh;
+    overflow-y: auto;
+
+}
+.menu-box{
+    background-color: black;
+    height: 9vh;
+    margin: 10px;
+    border-radius: 10px;
+    color: #FFD700;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    text-align: center;
+    padding-top: 3vh;
+}
+
+.menu-box:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+.adminPanel{
+    overflow-x: hidden;
+}
