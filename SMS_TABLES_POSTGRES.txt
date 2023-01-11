@@ -1,0 +1,93 @@
+CREATE DATABASE ssms;
+
+USE ssms;
+
+CREATE TABLE user_details (
+	uuid VARCHAR(50) NOT NULL,
+	first_name VARCHAR (100),
+	last_name VARCHAR (100),
+	gender VARCHAR (15),
+	mobile_no VARCHAR (15),
+    user_id VARCHAR (100) NOT NULL,
+	password VARCHAR (150),
+	created_by VARCHAR (100),
+	created_on timestamptz,
+	modified_by VARCHAR (100),
+	modified_on timestamptz,
+	constraint user_details_pkey PRIMARY KEY (uuid),
+	constraint user_details_ukey UNIQUE (user_id)
+
+);
+
+INSERT INTO user_details (uuid, first_name,user_id,password) VALUES ('1', 'Super Admin', 'superadmin','Test@123');
+
+CREATE TABLE category_master (
+	category_id VARCHAR(50) NOT NULL,
+	category_name VARCHAR (100),
+	description VARCHAR (300),
+	created_by VARCHAR (100),
+	created_on timestamptz,
+	modified_by VARCHAR (100),
+	modified_on timestamptz,
+	constraint category_master_pkey PRIMARY KEY (category_id),
+	constraint category_master_ukey UNIQUE (category_name)
+
+);
+
+
+CREATE TABLE item_master (
+	item_id VARCHAR(50) NOT NULL,
+	category_id VARCHAR(50) NOT NULL,
+	item_name VARCHAR (100),
+	description VARCHAR (300),
+	created_by VARCHAR (100),
+	created_on timestamptz,
+	modified_by VARCHAR (100),
+	modified_on timestamptz,
+	constraint item_master_pkey PRIMARY KEY (item_id),
+	 constraint item_master_category_id_fkey foreign key (category_id) references category_master (category_id),
+	constraint item_master_ukey UNIQUE (category_id, item_name)
+
+);
+
+CREATE TABLE unit_master (
+	unit_id VARCHAR(50) NOT NULL,
+	unit_name VARCHAR (100),
+	description VARCHAR (300),
+	created_by VARCHAR (100),
+	created_on timestamptz,
+	modified_by VARCHAR (100),
+	modified_on timestamptz,
+	constraint unit_master_pkey PRIMARY KEY (unit_id),
+	constraint unit_master_ukey UNIQUE (unit_name)
+
+);
+
+CREATE TABLE stock_master (
+	stock_id VARCHAR(50) NOT NULL,
+	item_id VARCHAR(50) NOT NULL,
+	quantity INTEGER NOT NULL,
+	unit_id VARCHAR (50),
+	unit_price FLOAT,	
+	selling_unit_price FLOAT,
+	created_by VARCHAR (100),
+	created_on timestamptz,
+	constraint stock_master_pkey PRIMARY KEY (stock_id),
+	constraint stock_master_item_id_fkey foreign key (item_id) references item_master (item_id),
+	constraint stock_master_unit_id_fkey foreign key (unit_id) references unit_master (unit_id)
+);
+
+CREATE TABLE transaction_info (
+	transaction_id VARCHAR(50) NOT NULL,
+	item_id VARCHAR(50) NOT NULL,
+	quantity INTEGER NOT NULL,
+	unit_id VARCHAR (50),
+	created_by VARCHAR (100),
+	created_on timestamptz,
+	constraint transaction_info_pkey PRIMARY KEY (transaction_id)
+
+);
+
+
+
+
