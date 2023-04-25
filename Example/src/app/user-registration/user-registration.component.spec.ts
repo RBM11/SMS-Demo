@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+>>>>>>> 30c6c0918bfca8eead2ae45abad7721d0f385d80
 
 import { UserRegistrationComponent } from './user-registration.component';
 
@@ -21,7 +25,10 @@ describe('UserRegistrationComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+<<<<<<< HEAD
 function beforeEach(arg0: () => Promise<void>) {
   throw new Error('Function not implemented.');
 }
 
+=======
+>>>>>>> 30c6c0918bfca8eead2ae45abad7721d0f385d80
