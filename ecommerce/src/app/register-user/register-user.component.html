@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>User Details</title>
+    <style>
+      /* Set default font size and color */
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        color: #333;
+      }
+
+      /* Container for user details and order history */
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+      }
+
+      /* User details section */
+      .user-details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 20px;
+        width: 400px;
+        margin-bottom: 20px;
+      }
+
+      /* Edit button */
+      .edit-btn {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        margin-bottom: 10px;
+        cursor: pointer;
+      }
+
+      /* Order history table */
+      .order-history {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 800px;
+      }
+
+      /* Table header */
+      .order-history th {
+        background-color: #4CAF50;
+        color: white;
+        text-align: left;
+        padding: 10px;
+      }
+
+      /* Table cells */
+      .order-history td {
+        border-bottom: 1px solid #ccc;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="user-details">
+        <h2>User Details</h2>
+        <p><strong>Name:</strong> John Smith</p>
+        <p><strong>Email:</strong> john.smith@example.com</p>
+        <p><strong>Contact Number:</strong> 555-555-5555</p>
+        <button class="edit-btn">Edit Details</button>
+      </div>
+      <h2>Order History</h2>
+      <table class="order-history">
+        <thead>
+          <tr>
+            <th>Order ID</th>
+            <th>Date</th>
+            <th>Total Cost</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1234</td>
+            <td>2023-02-25</td>
+            <td>$100.00</td>
+          </tr>
+          <tr>
+            <td>5678</td>
+            <td>2023-02-20</td>
+            <td>$50.00</td>
+          </tr>
+          <tr>
+            <td>9012</td>
+            <td>2023-02-15</td>
+            <td>$75.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
